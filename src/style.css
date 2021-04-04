@@ -1,0 +1,43 @@
+body {
+  margin: 40px;
+}
+
+h1,
+h3 {
+  font-weight: normal;
+  position: relative;
+}
+
+.city-hour {
+  font-size: 18px;
+}
+
+button,
+.form-control {
+  display: inline;
+  position: relative;
+}
+.container {
+  border: 1px solid black;
+  max-width: 800px;
+  margin: auto;
+}
+
+.today-weather {
+  height: 300px;
+  background: url(https://images.pexels.com/photos/72473/pexels-photo-72473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+    right center no-repeat;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.todaysMetrics {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.row {
+  text-align: center;
+}
