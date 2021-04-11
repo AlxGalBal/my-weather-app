@@ -2,11 +2,20 @@ body {
   margin: 40px;
 }
 
-h1,
 h3 {
   font-weight: normal;
   position: relative;
 }
+#todays-temperature {
+  font-size: 50px;
+}
+
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -25px;
+}
+
 #current-temp {
   margin: 0;
 }

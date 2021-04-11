@@ -39,12 +39,17 @@
         <div id="current-temp" class="container">
           <div class="row jstify-content-start">
             <div class="col-4">
-              <h1><span id="todays-temperature"></span>°C | °F</h1>
+              <strong id="todays-temperature"></strong>
+              <span class="units">
+                <a href="#" id="celsius-celsius">°C</a> |
+                <a href="#" id="farenheit-link">°F</a></span
+              >
+              <br />
               <img src="" alt="clear" id="icon" />
             </div>
             <div class="col-4">
-              <p>Humidity: <span id="humidity">23</span>%</p>
-              <p>Wind: <span id="wind">3</span>Km/H</p>
+              <p>Humidity: <span id="humidity"></span>%</p>
+              <p>Wind: <span id="wind"></span>Km/H</p>
             </div>
           </div>
         </div>
