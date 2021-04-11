@@ -36,10 +36,20 @@
           </button>
         </form>
         <h1 id="searched-city"></h1>
-        <h1><span id="todays-temperature"></span>°C | °F</h1>
-        <img src="" alt="clear" id="icon" />
+        <div id="current-temp" class="container">
+          <div class="row jstify-content-start">
+            <div class="col-4">
+              <h1><span id="todays-temperature"></span>°C | °F</h1>
+              <img src="" alt="clear" id="icon" />
+            </div>
+            <div class="col-4">
+              <p>Humidity: <span id="humidity">23</span>%</p>
+              <p>Wind: <span id="wind">3</span>Km/H</p>
+            </div>
+          </div>
+        </div>
         <p class="city-hour"></p>
-        <div class="row">
+        <div class="row" id="forecast">
           <div class="col">
             <div class="card">
               <h5 class="card-header">Tuesday</h5>

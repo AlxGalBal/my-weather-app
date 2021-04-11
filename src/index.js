@@ -27,6 +27,10 @@ function showWeather(response) {
   cityName.innerHTML = response.data.name;
   let currentCityTemp = document.querySelector("#todays-temperature");
   currentCityTemp.innerHTML = Math.round(response.data.main.temp);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHtml = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHtml = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",

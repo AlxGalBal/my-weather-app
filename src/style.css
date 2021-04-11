@@ -7,7 +7,9 @@ h3 {
   font-weight: normal;
   position: relative;
 }
-
+#current-temp {
+  margin: 0;
+}
 .city-hour {
   font-size: 18px;
 }
@@ -21,7 +23,7 @@ h3 {
   margin: auto;
 }
 
-.row {
+#forecast {
   color: black;
   text-align: center;
   margin-top: 150px;
