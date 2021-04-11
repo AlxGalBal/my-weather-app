@@ -12,10 +12,9 @@ h3 {
   font-size: 18px;
 }
 
-button,
 .form-control {
   display: inline;
-  position: relative;
+  margin-top: 15px;
 }
 .container {
   max-width: 70%;
@@ -25,7 +24,7 @@ button,
 .row {
   color: black;
   text-align: center;
-  margin-top: 225px;
+  margin-top: 150px;
 }
 
 .today-weather {

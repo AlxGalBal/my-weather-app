@@ -27,6 +27,11 @@ function showWeather(response) {
   cityName.innerHTML = response.data.name;
   let currentCityTemp = document.querySelector("#todays-temperature");
   currentCityTemp.innerHTML = Math.round(response.data.main.temp);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function citySearch(event) {
