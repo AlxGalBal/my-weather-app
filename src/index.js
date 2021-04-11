@@ -57,3 +57,5 @@ function getCurrentPosition() {
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentPosition);
+
+search("Cancun");

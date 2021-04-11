@@ -18,13 +18,18 @@ button,
   position: relative;
 }
 .container {
-  border: 1px solid black;
-  max-width: 800px;
+  max-width: 70%;
   margin: auto;
 }
 
+.row {
+  color: black;
+  text-align: center;
+  margin-top: 225px;
+}
+
 .today-weather {
-  height: 300px;
+  height: 600px;
   background: url(https://images.pexels.com/photos/72473/pexels-photo-72473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
     right center no-repeat;
   border-radius: 25px;
@@ -36,10 +41,6 @@ button,
 .todaysMetrics {
   text-decoration: none;
   color: aliceblue;
-}
-
-.row {
-  text-align: center;
 }
 
 .open-code-by-me {
