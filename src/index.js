@@ -23,8 +23,13 @@ if (minutes < 10) {
 dayAndHour.innerHTML = `${day}, ${hour}:${minutes} hours`;
 
 function showWeather(response) {
+  console.log(response.data);
+
   let cityName = document.querySelector("#searched-city");
   let currentCityTemp = document.querySelector("#todays-temperature");
+  let weatherDescriptionElement = document.querySelector(
+    "#weather-description"
+  );
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
@@ -32,6 +37,7 @@ function showWeather(response) {
   cityName.innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
   currentCityTemp.innerHTML = Math.round(celsiusTemperature);
+  weatherDescriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
