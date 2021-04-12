@@ -24,15 +24,16 @@ dayAndHour.innerHTML = `${day}, ${hour}:${minutes} hours`;
 
 function showWeather(response) {
   let cityName = document.querySelector("#searched-city");
-  cityName.innerHTML = response.data.name;
   let currentCityTemp = document.querySelector("#todays-temperature");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+
+  cityName.innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
   currentCityTemp.innerHTML = Math.round(celsiusTemperature);
-  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
-  let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -65,16 +66,20 @@ function getCurrentPosition() {
 
 function showFarenheintTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#todays-temperature");
   let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
-/*function showCelsiusTemperature(event) {
+function showCelsiusTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#todays-temperature");
-  temperatureElement.innerHTML = celsiusTemperature;
-}*/
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 let form = document.querySelector("form");
 form.addEventListener("submit", citySearch);
@@ -87,7 +92,7 @@ let celsiusTemperature = null;
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", showFarenheintTemperature);
 
-/*let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);*/
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Cancun");
