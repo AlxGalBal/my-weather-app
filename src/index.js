@@ -26,11 +26,12 @@ function showWeather(response) {
   let cityName = document.querySelector("#searched-city");
   cityName.innerHTML = response.data.name;
   let currentCityTemp = document.querySelector("#todays-temperature");
-  currentCityTemp.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  currentCityTemp.innerHTML = Math.round(celsiusTemperature);
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHtml = response.data.main.humidity;
+  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
-  windElement.innerHtml = Math.round(response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -45,8 +46,6 @@ function citySearch(event) {
   citySearched.innerHTML = `${input.value}`;
   search(input.value);
 }
-let form = document.querySelector("form");
-form.addEventListener("submit", citySearch);
 
 function search(city) {
   let apiKey = "5c5df4d7dda74f566375f7ab7cc86495";
@@ -67,14 +66,28 @@ function getCurrentPosition() {
 function showFarenheintTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#todays-temperature");
-  let farenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
+
+/*function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#todays-temperature");
+  temperatureElement.innerHTML = celsiusTemperature;
+}*/
+
+let form = document.querySelector("form");
+form.addEventListener("submit", citySearch);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentPosition);
 
+let celsiusTemperature = null;
+
 let farenheitLink = document.querySelector("#farenheit-link");
 farenheitLink.addEventListener("click", showFarenheintTemperature);
+
+/*let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);*/
 
 search("Cancun");
