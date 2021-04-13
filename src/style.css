@@ -46,10 +46,47 @@ a {
   flex-wrap: wrap;
   align-items: stretch;
   width: 36%;
+  margin: 25px;
 }
 
 #button-addon2 {
   margin-right: 10px;
+  border-radius: 0 8px 8px 0;
+  background-color: #5284b2;
+  border: none;
+}
+#button-addon2:hover {
+  background-color: #335472;
+  box-shadow: 3px 5px 12px rgba(58, 51, 51, 0.2);
+}
+
+#current-location {
+  border-radius: 8px;
+  background-color: #5284b2;
+  border: none;
+  box-shadow: 3px 5px 12px rgba(58, 51, 51, 0.2);
+}
+
+#current-location:hover {
+  background-color: #335472;
+}
+.form-control {
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(247, 241, 239, 0.733);
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 5px 12px rgba(58, 51, 51, 0.2);
+}
+.form-control:hover {
+  box-shadow: 3px 5px 12px rgba(58, 51, 51, 0.5);
+}
+
+.form-control:focus {
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(252, 249, 247, 0.925);
+  backdrop-filter: blur(10px);
+  box-shadow: 3px 5px 12px rgba(58, 51, 51, 0.2);
 }
 
 .container {
@@ -58,7 +95,7 @@ a {
 }
 
 #forecast {
-  color: black;
+  color: #22213;
   text-align: center;
   margin-top: 100px;
 }
@@ -70,7 +107,7 @@ a {
   border-radius: 50px;
   margin-top: 60px;
   padding: 20px;
-  color: black;
+  color: #22213a;
   font-weight: bold;
   box-shadow: 3px 8px 20px rgba(58, 51, 51, 0.4);
 }
@@ -80,12 +117,12 @@ a {
 }
 
 .active {
-  color: black;
+  color: #22213a;
   cursor: default;
   text-decoration: none;
 }
 
 .active:hover {
-  color: black;
+  color: #22213a;
   text-decoration: none;
 }
