@@ -40,10 +40,18 @@ a {
   font-size: 18px;
 }
 
-.form-control {
-  display: inline;
-  margin-top: 15px;
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 36%;
 }
+
+#button-addon2 {
+  margin-right: 10px;
+}
+
 .container {
   max-width: 70%;
   margin: auto;
