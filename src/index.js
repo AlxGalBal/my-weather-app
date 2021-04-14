@@ -22,6 +22,36 @@ if (minutes < 10) {
 
 dayAndHour.innerHTML = `${day}, ${hour}:${minutes} hours`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-2">
+              <div class="card">
+                <h5 class="card-header forecast-day">${day}</h5>
+                <div class="card-body">
+                  <div
+                    ><img
+                      src="https://openweathermap.org/img/wn/04n@2x.png"
+                      alt=""
+                      width="45"
+                  /></div>
+                  <span class="forecast-max"> 35° </span>
+                  <span class="forecast-min"> 25° </span>
+                </div>
+              </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   let cityName = document.querySelector("#searched-city");
   let currentCityTemp = document.querySelector("#todays-temperature");
@@ -100,3 +130,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Cancun");
+showForecast();
