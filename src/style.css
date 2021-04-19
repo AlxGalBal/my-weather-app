@@ -116,6 +116,7 @@ a:hover {
 }
 
 #forecast {
+  font-size: 14px;
   color: #22213a;
   text-align: center;
 }
