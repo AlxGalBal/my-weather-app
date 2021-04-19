@@ -21,56 +21,71 @@
   <div class="container">
     <body>
       <div class="today-weather">
-        <form id="search-form">
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search a city..."
-              aria-label="Search city"
-              aria-describedby="button-addon2"
-            />
-            <button class="btn btn-primary" type="submit" id="button-addon2">
-              <i class="fas fa-search"></i>
-            </button>
-            <button type="button" class="btn btn-primary" id="current-location">
-              Current <i class="fas fa-map-marker-alt"></i>
-            </button>
-          </div>
-        </form>
+        <header>
+          <form id="search-form">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search a city..."
+                aria-label="Search city"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-primary" type="submit" id="button-addon2">
+                <i class="fas fa-search"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="current-location"
+              >
+                Current <i class="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
+          </form>
+          <p class="city-hour"> </p>
+        </header>
         <h1 id="searched-city"></h1>
-        <div id="current-temp" class="container">
-          <div class="row jstify-content-start">
+        <div class="currentTempContainer">
+          <div class="row" id="current-temp">
             <div class="col-4">
               <span id="todays-temperature"></span>
               <span class="units">
                 <a href="#" class="active" id="celsius-link">°C</a> |
                 <a href="#" id="farenheit-link">°F</a>
               </span>
-              <br />
-              <p id="weather-description"> clear </p>
-              <img src="" alt="clear" id="icon" />
             </div>
             <div class="col-4">
-              <p>Humidity: <span id="humidity"></span>%</p>
-              <p>Wind: <span id="wind"></span> Km/H</p>
+              <p id="weather-description"> </p>
+              <img src="" alt="clear" id="icon" width="150" />
+            </div>
+            <div class="col-4">
+              <div class="currentWeatherCondition">
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind: <span id="wind"></span> Km/H</p>
+              </div>
             </div>
           </div>
         </div>
-        <p class="city-hour"></p>
         <div class="weather-forecast" id="forecast"> </div>
+      </div>
       <div class="personalLinks">
-        <a href="https://github.com/AlxGalBal/my-weather-app"
+        <a
+          href="https://github.com/AlxGalBal/my-weather-app"
           rel="link-open-code-by-Alejandra-G.B."
-          target="_blank">
-          Open-source code 
-          </a>
+          target="_blank"
+        >
+          Open-source code
+        </a>
         <span>by </span>
-        <a href="https://www.linkedin.com/in/alxgb/"
+        <a
+          href="https://www.linkedin.com/in/alxgb/"
           rel="linkedin-Alejandra-G.B."
-          target="_blank">
-          Alejandra G.B.</a>
-        </div>
+          target="_blank"
+        >
+          Alejandra G.B.</a
+        >
+      </div>
       <script src="src/index.js"></script>
     </body>
   </div>
